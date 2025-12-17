@@ -1,39 +1,69 @@
-# Ignore Python cache
+# Python cache and compiled files
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
+*.so
+*.egg-info/
+dist/
+build/
 *.sqlite3
 
-# Ignore environment files
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+.envrc
+
+# Environment files
 .env
 *.env
 
-
-!weights/
-!weights/*
-
-# Ignore virtual environments
-venv/
-.env/
-.envrc
-.venv/
-env/
-
-# Ignore IDE/editor configs
+# IDE/editor configs
 .vscode/
 .idea/
 *.swp
+*.swo
+*~
+.DS_Store
 
+# Model weights and checkpoints (large files - download separately)
+pipeline/weights/
+sam2_checkpoints/
+*.pth
+*.pt
+*.onnx
+*.pb
 
-# Ignore Jupyter notebooks
-*.ipynb
-AiBoardScanner__ (1).ipynb
+# Jupyter notebook outputs (keep source notebooks, ignore outputs)
+.ipynb_checkpoints/
+*-checkpoint.ipynb
 
-# Ignore sensitive config in pasapi
+# Temporary files
+*.tmp
+*.temp
+temp_*/
+/tmp/
+
+# Logs
+*.log
+logs/
+
+# Testing artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Sensitive config
 pasapi/config.json
 pasapi/secrets.json
 pasapi/*.env
 pasapi/*.ini
 pasapi/*.yaml
-pasapi/*.yml 
+pasapi/*.yml
+
+# OS specific
+Thumbs.db
+.DS_Store
