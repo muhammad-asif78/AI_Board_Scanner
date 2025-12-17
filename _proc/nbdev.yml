@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "nbdev_testing_simon2"
+  site-url: "https://muhammad-asif78.github.io/nbdev_testing_simon2"
+  description: "AI Board Scanner project—the FastAPI server for your AI scanner."
+  repo-branch: main
+  repo-url: "https://github.com/muhammad-asif78/nbdev_testing_simon2"

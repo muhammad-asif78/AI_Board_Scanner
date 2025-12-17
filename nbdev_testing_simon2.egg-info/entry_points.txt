@@ -1,0 +1,2 @@
+[nbdev]
+pipeline = pipeline._modidx:d
