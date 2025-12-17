@@ -1,0 +1,4 @@
+
+# Ignore SAM2 checkpoints
+pipeline/sam2_checkpoints/
+sam2_checkpoints copy/
