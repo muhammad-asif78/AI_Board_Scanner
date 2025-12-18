@@ -1,0 +1,21 @@
+website:
+  sidebar:
+    contents:
+      - index.ipynb
+      - 00_models.ipynb
+      - 01_geometry_utils.ipynb
+      - 02_color_extractor.ipynb
+      - 03_angle_predictor.ipynb
+      - 04_sam2_processor.ipynb
+      - 05_skeleton_analyzer.ipynb
+      - 06_diamond_handler.ipynb
+      - 07_arrow_detector.ipynb
+      - 08_text_mapper.ipynb
+      - 09_node_builder.ipynb
+      - 10_edge_builder.ipynb
+      - 11_paddle_ocr.ipynb
+      - 12_rf_detr.ipynb
+      - 13_routers_spatial.ipynb
+      - 14_spatial_pipeline.ipynb
+      - 15_download_models.ipynb
+      - main.ipynb

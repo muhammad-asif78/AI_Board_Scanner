@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://muhammad-asif78.github.io/nbdev_testing_simon2/main.html</loc>
-    <lastmod>2025-12-18T08:08:36.372Z</lastmod>
+    <loc>https://muhammad-asif78.github.io/nbdev_testing_simon2/index.html</loc>
+    <lastmod>2025-12-18T08:08:28.300Z</lastmod>
   </url>
   <url>
-    <loc>https://muhammad-asif78.github.io/nbdev_testing_simon2/download_models.html</loc>
-    <lastmod>2025-12-18T08:08:28.240Z</lastmod>
+    <loc>https://muhammad-asif78.github.io/nbdev_testing_simon2/spatial_pipeline.html</loc>
+    <lastmod>2025-12-18T08:08:36.150Z</lastmod>
   </url>
   <url>
-    <loc>https://muhammad-asif78.github.io/nbdev_testing_simon2/routers_spatial.html</loc>
-    <lastmod>2025-12-18T08:08:36.291Z</lastmod>
-  </url>
-  <url>
-    <loc>https://muhammad-asif78.github.io/nbdev_testing_simon2/11_paddle_ocr.html</loc>
-    <lastmod>2025-12-18T08:08:28.332Z</lastmod>
+    <loc>https://muhammad-asif78.github.io/nbdev_testing_simon2/rf_detr.html</loc>
+    <lastmod>2025-12-18T08:08:36.030Z</lastmod>
   </url>
   <url>
     <loc>https://muhammad-asif78.github.io/nbdev_testing_simon2/node_builder.html</loc>
@@ -35,6 +31,14 @@
   <url>
     <loc>https://muhammad-asif78.github.io/nbdev_testing_simon2/geometry_utils.html</loc>
     <lastmod>2025-12-18T08:08:28.093Z</lastmod>
+  </url>
+  <url>
+    <loc>https://muhammad-asif78.github.io/nbdev_testing_simon2/main.html</loc>
+    <lastmod>2025-12-18T08:08:36.372Z</lastmod>
+  </url>
+  <url>
+    <loc>https://muhammad-asif78.github.io/nbdev_testing_simon2/11_paddle_ocr.html</loc>
+    <lastmod>2025-12-18T08:08:28.332Z</lastmod>
   </url>
   <url>
     <loc>https://muhammad-asif78.github.io/nbdev_testing_simon2/models.html</loc>
@@ -61,15 +65,11 @@
     <lastmod>2025-12-18T08:08:28.233Z</lastmod>
   </url>
   <url>
-    <loc>https://muhammad-asif78.github.io/nbdev_testing_simon2/rf_detr.html</loc>
-    <lastmod>2025-12-18T08:08:36.030Z</lastmod>
+    <loc>https://muhammad-asif78.github.io/nbdev_testing_simon2/routers_spatial.html</loc>
+    <lastmod>2025-12-18T08:08:36.291Z</lastmod>
   </url>
   <url>
-    <loc>https://muhammad-asif78.github.io/nbdev_testing_simon2/spatial_pipeline.html</loc>
-    <lastmod>2025-12-18T08:08:36.150Z</lastmod>
-  </url>
-  <url>
-    <loc>https://muhammad-asif78.github.io/nbdev_testing_simon2/index.html</loc>
-    <lastmod>2025-12-18T08:08:28.300Z</lastmod>
+    <loc>https://muhammad-asif78.github.io/nbdev_testing_simon2/download_models.html</loc>
+    <lastmod>2025-12-18T08:08:28.240Z</lastmod>
   </url>
 </urlset>

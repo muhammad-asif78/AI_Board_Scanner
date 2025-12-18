@@ -1,5 +1,74 @@
 {
+  "00_models.ipynb": {
+    "models.html": "0c4535cc",
+    "models.html.md": "7457c740"
+  },
+  "01_geometry_utils.ipynb": {
+    "geometry_utils.html": "cf2f7670",
+    "geometry_utils.html.md": "8f206001"
+  },
+  "02_color_extractor.ipynb": {
+    "color_extractor.html": "d5ce4e2a",
+    "color_extractor.html.md": "67c20a95"
+  },
+  "03_angle_predictor.ipynb": {
+    "angle_predictor.html": "26c19a06",
+    "angle_predictor.html.md": "f2be8c78"
+  },
+  "04_sam2_processor.ipynb": {
+    "sam2_processor.html": "b03e5ae0",
+    "sam2_processor.html.md": "06276730"
+  },
+  "05_skeleton_analyzer.ipynb": {
+    "skeleton_analyzer.html": "1444c7a4",
+    "skeleton_analyzer.html.md": "12b2f56c"
+  },
+  "06_diamond_handler.ipynb": {
+    "diamond_handler.html": "2729329c",
+    "diamond_handler.html.md": "61b69f39"
+  },
+  "07_arrow_detector.ipynb": {
+    "arrow_detector.html": "7ef88273",
+    "arrow_detector.html.md": "e2f926af"
+  },
+  "08_text_mapper.ipynb": {
+    "text_mapper.html": "32150662",
+    "text_mapper.html.md": "38695e6b"
+  },
+  "09_node_builder.ipynb": {
+    "node_builder.html": "f673d5aa",
+    "node_builder.html.md": "40b3b3ea"
+  },
+  "10_edge_builder.ipynb": {
+    "edge_builder.html": "4d3e258b",
+    "edge_builder.html.md": "bd0d74e5"
+  },
+  "11_paddle_ocr.ipynb": {
+    "11_paddle_ocr.html": "ca4ff9e1",
+    "11_paddle_ocr.md": "4dbcaa8d"
+  },
+  "12_rf_detr.ipynb": {
+    "rf_detr.html": "ecd7cee2",
+    "rf_detr.html.md": "a7535000"
+  },
+  "13_routers_spatial.ipynb": {
+    "routers_spatial.html": "d1c66f9f",
+    "routers_spatial.html.md": "515f61c2"
+  },
+  "14_spatial_pipeline.ipynb": {
+    "spatial_pipeline.html": "6d3edfed",
+    "spatial_pipeline.html.md": "ebeb4b0a"
+  },
+  "15_download_models.ipynb": {
+    "download_models.html": "37e690eb",
+    "download_models.html.md": "867298c8"
+  },
   "index.ipynb": {
-    "README.md": "fa20bd17"
+    "index.html": "47241563",
+    "index.html.md": "9a813f57"
+  },
+  "main.ipynb": {
+    "main.html": "c8ec823b",
+    "main.html.md": "567638ec"
   }
 }
