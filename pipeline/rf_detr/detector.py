@@ -4,28 +4,24 @@
 __all__ = ['ShapeDetection', 'detect_shapes']
 
 # %% ../../nbs/12_rf_detr.ipynb 2
-from typing import List, Tuple, Optional
 import os
-
+from typing import List, Tuple, Optional
 from PIL import Image
 
+try:
+    from rfdetr import RFDETRMedium
+except Exception as e:
+    print(f"[RF-DETR] Failed to import rfdetr: {e}")
+    RFDETRMedium = None
 
-_RFDETR_MODEL = None
 _CLASS_NAMES = [
-    "objects",
-    "Cloud",
-    "Diamond",
-    "Double Arrow",
-    "Pentagon",
-    "Racetrack",
-    "Star",
-    "Sticky Notes",
-    "Triangle",
     "arrow",
-    "arrow_head",
     "circle",
-    "dashed-arrow",
-    "dotted-arrow",
+    "diamond",
+    "hexagon",
+    "line",
+    "parallelogram", 
+    "pentagon",
     "rectangle",
     "rounded rectangle",
     "solid-arrow",
@@ -55,26 +51,36 @@ def _is_git_lfs_pointer_file(path: str) -> bool:
         return False
 
 
+_RFDETR_MODEL = None
+
+
 def _load_model(weights_path: Optional[str] = None):
+    """Load RF-DETR model once and cache as global."""
     global _RFDETR_MODEL
     if _RFDETR_MODEL is not None:
         return _RFDETR_MODEL
+    
     if weights_path is None:
         weights_path = _default_weights_path()
+    
     if not os.path.exists(weights_path):
         print(f"[RF-DETR] Weights not found at: {weights_path}")
         _RFDETR_MODEL = None
         return None
+    
     if _is_git_lfs_pointer_file(weights_path):
-        print(
-            "[RF-DETR] Weights file looks like a Git-LFS pointer, not the real .pth weights. "
-            "Fetch LFS files (e.g., `git lfs pull`) or replace the file with the full checkpoint. "
-            f"Path: {weights_path}"
-        )
+        print("[RF-DETR] Weights file looks like a Git-LFS pointer, not the real .pth weights. "
+              "Fetch LFS files (e.g., `git lfs pull`) or replace the file with the full checkpoint. "
+              f"Path: {weights_path}")
         _RFDETR_MODEL = None
         return None
+    
     try:
-        from rfdetr import RFDETRMedium
+        if RFDETRMedium is None:
+            print("[RF-DETR] RF-DETR library not available")
+            _RFDETR_MODEL = None
+            return None
+            
         model = RFDETRMedium(pretrain_weights=weights_path)
         model.optimize_for_inference()
         _RFDETR_MODEL = model
@@ -88,7 +94,7 @@ def _load_model(weights_path: Optional[str] = None):
 def detect_shapes(file_path: str, threshold: float = 0.25, raise_on_model_failure: bool = False) -> List[ShapeDetection]:
     """Run RF-DETR inference and return list of (label, (x1,y1), (x2,y2), confidence).
 
-    Returns empty list if model or image cannot be loaded.
+    Returns empty list if model or image cannot be loaded, unless raise_on_model_failure is True.
     """
     model = _load_model()
     if model is None:
@@ -103,7 +109,7 @@ def detect_shapes(file_path: str, threshold: float = 0.25, raise_on_model_failur
         return []
 
     try:
-        detections = model.predict(image, threshold=float(threshold))
+        detections = model.predict(image, threshold=threshold)
         results: List[ShapeDetection] = []
         for bbox, class_id, conf in zip(detections.xyxy, detections.class_id, detections.confidence):
             x_min, y_min, x_max, y_max = bbox
@@ -119,4 +125,6 @@ def detect_shapes(file_path: str, threshold: float = 0.25, raise_on_model_failur
         return results
     except Exception as exc:
         print(f"[RF-DETR] Inference failed: {exc}")
+        if raise_on_model_failure:
+            raise RuntimeError(f"RF-DETR inference failed: {exc}") from exc
         return []
